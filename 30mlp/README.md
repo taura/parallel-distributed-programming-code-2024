@@ -3,7 +3,6 @@
 # Get source code
 
 ```
-cd WHEREVER_YOU_WORK
 git clone https://github.com/taura/parallel-distributed-programming-code-2024.git
 ```
 
@@ -12,7 +11,6 @@ You should get directory `parallel-distributed-programming-code-2024`
 # Compile
 
 ```
-# assuming you are in WHEREVER_YOU_WORK
 cd parallel-distributed-programming-code-2024/30mlp
 make
 ```
@@ -23,7 +21,6 @@ You should get `mlp_mnist_infer` in the directory.
 # Run
 
 ```
-# assuming you are in WHEREVER_YOU_WORK/parallel-distributed-programming-code-2024/30mlp
 ./mlp_mnist_infer
 ```
 
@@ -86,19 +83,19 @@ options:
 
 ```
 
-# Do your work
+# Your work
 
 * Your job is to make it run faster
 * You have to make
-  * a program for multicores, using OpenMP running on CPU
+  * a program for multicores, using OpenMP
   * a program for GPU, using either an OpenMP or a CUDA
   * a program for CPU, using SIMD
 * Optionally, you make
-  * a program for CPU, using SIMD AND muticores
+  * a program for CPU, using SIMD AND OpenMP
 
 # Updates are coming 
 
-* This is going to be your next assignment you have to submit
+* This is going to be your next assignment you have to submit (due is not decided yet, but never earlier than December 7th)
 * Please anticipate more details will come later about how to submit your work and what must be included in it
-* I release this now so that you can start working on it early and have work to do on Nov 18th, the day we would normally have a class but we actually don't
+* I release this baseline code now so that you can start working on it now and have work to do on Nov 18th, the day I have to cancel the class
 * Please start working on it now (or anytime you think you are ready for it)
