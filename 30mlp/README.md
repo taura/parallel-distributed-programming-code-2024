@@ -24,14 +24,17 @@ You should get `mlp_mnist_infer` in the directory.
 ./mlp_mnist_infer
 ```
 
+will run the inference with the default setting, which is to process the 60000 samples in `/home/share/mnist-data/train_images_60000x784_float32.npy` (labels are in `/home/share/mnist-data/train_labels_60000_float32.npy`)
+
 The output should look like this.
 
 ```
-read data from: /home/share/mnist-data/train_images_60000x784_float32.npy//home/share/mnist-data/train_labels_60000_float32.npy [0 - -1]
+read data from: /home/share/mnist-data/train_images_60000x784_float32.npy
+read labels from: /home/share/mnist-data/train_labels_60000_float32.npy
 mini batch size: 256
-max mini batch size: 256
+max mini batch size: 60000
 pixels per image: 784
-hidden units: 200
+hidden units: 400
 output classes: 10
 weight read from: /home/share/mnist-data/mlp-mnist-weight.bin
 read weights from /home/share/mnist-data/mlp-mnist-weight.bin
@@ -39,19 +42,26 @@ reading data from /home/share/mnist-data/train_images_60000x784_float32.npy
 read 60000 samples
 reading data from /home/share/mnist-data/train_labels_60000_float32.npy
 read 60000 samples
+draw 60000 samples from [0:60000]
 iterations start ...
-[0 - 256] ... loss = 0.126792 accuracy = 0.968750
-[256 - 512] ... loss = 0.091159 accuracy = 0.980469
-[512 - 768] ... loss = 0.106709 accuracy = 0.964844
-[768 - 1024] ... loss = 0.155397 accuracy = 0.941406
-   ...
-[59648 - 59904] ... loss = 0.152160 accuracy = 0.960938
-[59904 - 60000] ... loss = 0.230854 accuracy = 0.989583
+[0 - 256] ... loss = 0.130931 accuracy = 0.960938
+[256 - 512] ... loss = 0.116322 accuracy = 0.953125
+[512 - 768] ... loss = 0.125852 accuracy = 0.968750
+[768 - 1024] ... loss = 0.142651 accuracy = 0.960938
+
+    ...
+
+[59136 - 59392] ... loss = 0.072811 accuracy = 0.980469
+[59392 - 59648] ... loss = 0.043428 accuracy = 0.988281
+[59648 - 59904] ... loss = 0.181115 accuracy = 0.960938
+[59904 - 60000] ... loss = 0.197375 accuracy = 0.979167
 iterations end
 60000 samples
-loss avg = 0.111972 accuracy avg = 0.965267
+loss avg = 0.117300 accuracy avg = 0.965117
 23856000000 flops in 14.58120227 sec = 1.64 flops/nsec
 ```
+
+The value of loss avg (0.117300) and accuracy avg (0.965117) should be exactly these values unless you give command line arguments that change which samples are processed.  See below for details.
 
 # Other ways to run
 
@@ -79,9 +89,10 @@ options:
     read true label (class) from this file (default: /home/share/mnist-data/train_labels_60000_float32.npy)
   --verbose N
     show stats and progress (default: 1)
-
-
 ```
+
+* When given `--n-samples N --batch-sz x` the first batch is always sample 0, 1, ..., x-1, the second batch is x, x+1, ..., 2x-1, until you reach the end (sample N-1), after which you wrap around and start processing sample 0.
+* Of course, processing the same data twice in inference is meaningless, but this program is written to process arbitrary number of samples for the purpose of performance investigation.
 
 # Your work
 
