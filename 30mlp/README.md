@@ -110,3 +110,4 @@ options:
 * Please anticipate more details will come later about how to submit your work and what must be included in it
 * I release this baseline code now so that you can start working on it now and have work to do on Nov 18th, the day I have to cancel the class
 * Please start working on it now (or anytime you think you are ready for it)
+* Further updates will be given by updating this page
