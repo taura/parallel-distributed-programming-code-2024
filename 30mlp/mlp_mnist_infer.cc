@@ -37,7 +37,7 @@ enum {
 
 /* number of units in the hidden layer */
 #ifndef n_units
-#define n_units 200
+#define n_units 400
 #endif
 
 /* the maximum number of samples in a single 
@@ -601,8 +601,8 @@ int main(int argc, char ** argv) {
   MLP<max_batch_sz,n_pixels,n_units,n_classes> * mlp
     = new MLP<max_batch_sz,n_pixels,n_units,n_classes>();
 
-  printf("read data from: %s/%s [%ld - %ld]\n",
-         opt.data, opt.label, opt.data_start, opt.data_end);
+  printf("read data from: %s\n", opt.data);
+  printf("read labels from: %s\n", opt.label);
   printf("mini batch size: %ld\n", opt.batch_sz);
   printf("max mini batch size: %d\n", max_batch_sz);
   printf("pixels per image: %d\n", n_pixels);
@@ -616,6 +616,8 @@ int main(int argc, char ** argv) {
   mat<max_n_data,1>        * C = read_data<max_n_data,1>(opt.label);
   if (opt.data_end == -1) opt.data_end = X->m;
   if (opt.n_samples == -1) opt.n_samples = opt.data_end - opt.data_start;
+  printf("draw %ld samples from [%ld:%ld]\n",
+         opt.n_samples, opt.data_start, opt.data_end);
 
   if (opt.batch_sz > max_batch_sz) {
     printf("error: batch size (%ld) must be <= max_batch_sz (%d)\n",
