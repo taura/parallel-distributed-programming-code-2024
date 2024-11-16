@@ -122,7 +122,7 @@ struct cmdline_opt {
     data_end = -1;
     n_samples = -1;
     batch_sz = max_batch_sz;
-    input_weight = 0;
+    input_weight = strdup("/home/share/mnist-data/mlp-mnist-weight.bin");
     data = strdup("/home/share/mnist-data/train_images_60000x784_float32.npy");
     label = strdup("/home/share/mnist-data/train_labels_60000_float32.npy");
     verbose = 1;
