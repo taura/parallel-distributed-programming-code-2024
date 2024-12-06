@@ -352,7 +352,7 @@ template<long M,long N>
 struct SoftmaxCrossEntropy {
   mat<M,N> lsm;                 // store log(softmax(x))
   mat<M,1> y;                   // output 
-  mat<M,N>& logsoftmax(mat<M,N> x) {
+  mat<M,N>& logsoftmax(mat<M,N>& x) {
     long m = x.m;
     assert(N > 0);
     assert(0 < m);
