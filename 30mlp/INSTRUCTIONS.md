@@ -185,6 +185,7 @@ Here’s the proofread and revised version of your text:
 - When finished, submit the notebook by pressing the "Submit" button and send a note through UTOL, as you have done for earlier exercises (e.g., `pd01_omp`).
 - The "Submit" button in Jupyter should automatically submit your code in `~/notebooks/30mlp/parallel-distributed-programming-code-2024` (or any file under `~/notebooks/30mlp/`).
 - **Note**: Unlike previous coding exercises, `pd30_mlp.sos.ipynb` should be a self-contained and readable document that includes all your efforts, thoughts, and experimental results.
+- Check UTOL for the deadline
 
 ### The report should at least include:
 

@@ -106,8 +106,6 @@ options:
 
 # Updates are coming 
 
-* This is going to be your next assignment you have to submit (due is not decided yet, but never earlier than December 7th)
-* Please anticipate more details will come later about how to submit your work and what must be included in it
-* I release this baseline code now so that you can start working on it now and have work to do on Nov 18th, the day I have to cancel the class
-* Please start working on it now (or anytime you think you are ready for it)
-* Further updates will be given by updating this page
+* Updated (on December 8th)
+* This is your next assignment you have to submit
+* See [INSTRUCTIONS.md](INSTRUCTIONS.md) and UTOL for more detailed spec of the assignment
