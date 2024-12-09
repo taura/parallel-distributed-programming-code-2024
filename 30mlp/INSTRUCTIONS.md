@@ -206,3 +206,22 @@ Here’s the proofread and revised version of your text:
 - Tabulate or visualize your results as you would when writing a research paper.
 - Additional optimizations not explicitly mentioned above are welcome and encouraged.
 
+### Updates after December 9th
+
+To address some of the comments and concerns about the workload and deadline for the assignment, I will make the following changes:
+
+- The items listed in the 3rd bullet point (i.e., "The cycles per innermost iteration of $F$ under the following scenarios") are now **optional**.
+- For the 1st, 2nd, and 4th bullet points, performing the tasks for **both the CPU and GPU** is now optional. You may choose **either the CPU or the GPU**.
+
+### Minimum Requirements:
+Threfore, at a very minimum, you:
+1. Identify the most time-consuming function, which should be very straightforward.
+2. Choose either the CPU or GPU.
+3. Measure the number of cycles per iteration of the innermost loop of the function identified as most time-consuming.
+4. Apply any combination of optimization methods.
+5. Record and analyze the execution time of key functions before and after optimization.
+
+### Additional Notes:
+- While the tasks I have now marked as **optional** are no longer mandatory, they are **recommended** and will contribute to your grade.
+- More importantly, these tasks reflect the kind of work typically performed in system-level performance engineering. I encourage you to go through these processes as they are crucial for developing your skills and understanding in this field.
+
